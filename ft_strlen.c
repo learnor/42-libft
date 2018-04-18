@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 01:12:23 by zwen             ###   ########.fr       */
+/*   Created: 2018/04/18 00:53:27 by zwen              #+#    #+#             */
+/*   Updated: 2018/04/18 01:13:00 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
+#include "libft.h"
 
-int		ft_isalpha(int c);
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-#endif
+size_t	ft_strlen(const char *s)
+{
+	register size_t counter;
+
+	counter = 0;
+	while (*(s++))
+		counter++;
+	return counter;
+}
