@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 00:53:27 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 01:13:00 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/18 08:53:44 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ size_t	ft_strlen(const char *s)
 	counter = 0;
 	while (*(s++))
 		counter++;
-	return counter;
+	return (counter);
 }
