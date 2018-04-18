@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 09:00:08 by zwen             ###   ########.fr       */
+/*   Created: 2018/04/18 08:43:04 by zwen              #+#    #+#             */
+/*   Updated: 2018/04/18 09:00:51 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s1);
-int		ft_isalpha(int c);
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-#endif
+char	*ft_strdup(const char *s1)
+{
+	int		size;
+	char	*dupstr;
+
+	size = ft_strlen(s1);
+	dupstr = (char *)malloc(sizeof(*dupstr) * (size + 1));
+	if (dupstr)
+	{
+		dupstr[size] = '\0';
+		while (--size >= 0)
+			dupstr[size] = s1[size];
+		return (dupstr);
+	}
+	else
+		return (NULL);
+}
