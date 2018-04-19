@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 12:30:53 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/19 15:51:04 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/19 16:39:46 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	register int	i;
 	register char	*hptr;
 	register char	*nptr;
+	register int	n;
 
 	hptr = (char *)haystack;
 	nptr = (char *)needle;
 	if (!(*nptr))
 		return (hptr);
-	while (*hptr)
+	n = ft_strlen(hptr) - ft_strlen(nptr) + 1;
+	while (n-- > 0)
 	{
 		if (*hptr == *nptr)
 		{
