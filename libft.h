@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/19 01:44:06 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/19 02:06:09 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void	*ft_memccpy(
 		void *restrict dst, const void *restrict src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
