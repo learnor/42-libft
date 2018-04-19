@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/19 11:53:55 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/19 12:05:25 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 size_t	ft_strlcat(
 		char *restrict dst, const char *restrict src, size_t dstsize);
+char	*ft_strchr(const char *s, int c);
 int		ft_isalpha(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
