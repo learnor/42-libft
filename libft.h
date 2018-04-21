@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/20 22:06:55 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/20 22:40:37 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ int		ft_tolower(int c);
 void	*ft_memalloc(size_t size);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
-int		ft_is_space(char c);
+int		ft_isspace(char c);
 #endif

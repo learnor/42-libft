@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/20 00:29:12 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/20 15:15:45 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/20 22:40:59 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_atoi(const char *str)
 	register int		tmp;
 
 	s = str;
-	while (*s && ft_is_space(*s))
+	while (*s && ft_isspace(*s))
 		s++;
 	neg = 1;
 	if (*s == '+' || *s == '-')
