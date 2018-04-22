@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 15:52:01 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/19 17:14:29 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/22 01:58:15 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (!(*nptr))
 		return (hptr);
 	n = ft_strlen(nptr) - 1;
+	len = len < ft_strlen(hptr) ? len : ft_strlen(hptr);
 	while (len > n++)
 	{
 		if (*hptr == *nptr)
