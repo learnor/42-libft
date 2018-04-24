@@ -6,14 +6,14 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 20:59:35 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 21:38:14 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/24 16:28:32 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memccpy(
-		void *restrict dst, const void *restrict src, int c, size_t n)
+		void * dst, const void * src, int c, size_t n)
 {
 	register char		*d;
 	register const char	*s;

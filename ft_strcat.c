@@ -6,13 +6,13 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 10:42:35 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 11:01:43 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/24 16:28:41 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char * s1, const char * s2)
 {
 	register int n1;
 	register int n2;
