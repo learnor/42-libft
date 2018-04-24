@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 18:42:46 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/23 18:52:20 by zwen             ###   ########.fr       */
+/*   Created: 2018/04/23 18:45:33 by zwen              #+#    #+#             */
+/*   Updated: 2018/04/23 18:48:43 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	register int	len;
-
-	if (!s)
-		return ;
-	len = ft_strlen(s);
-	write(fd, s, len);
+	if (s)
+	{
+		ft_putstr_fd(s, fd);
+		write(fd, "\n", 1);
+	}
 }
