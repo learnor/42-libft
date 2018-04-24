@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 20:11:18 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/23 18:41:47 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/23 18:44:45 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
 int		ft_isspace(char c);
 #endif
