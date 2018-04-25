@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 08:43:04 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/18 09:00:51 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/24 21:34:12 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		size;
-	char	*dupstr;
+	register int	size;
+	register char	*dupstr;
 
-	size = ft_strlen(s1);
-	dupstr = (char *)malloc(sizeof(*dupstr) * (size + 1));
-	if (dupstr)
-	{
-		dupstr[size] = '\0';
-		while (--size >= 0)
-			dupstr[size] = s1[size];
-		return (dupstr);
-	}
-	else
+	size = ft_strlen(s1) + 1;
+	dupstr = (char *)malloc(sizeof(*dupstr) * size);
+	if (!dupstr)
 		return (NULL);
+	ft_memcpy(dupstr, s1, size);
+	return (dupstr);
 }
