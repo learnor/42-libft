@@ -6,7 +6,7 @@
 #    By: zwen <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/17 20:39:55 by zwen              #+#    #+#              #
-#    Updated: 2018/04/24 23:08:02 by zwen             ###   ########.fr        #
+#    Updated: 2018/04/25 15:21:08 by zwen             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ FLAG = -Wall -Wextra -Werror -c
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(SRC)
+	gcc $(FLAG) $(OPT) $(SRC)
 	ar rc $(NAME) $(O_FILES)
 	ranlib $(NAME)
 
