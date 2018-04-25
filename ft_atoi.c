@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/20 00:29:12 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/20 22:40:59 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/25 14:46:52 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		ft_atoi(const char *str)
 {
-	register int		res;
+	register int long	res;
 	register int		neg;
 	register const char	*s;
-	register int		tmp;
+	register int long	tmp;
 
 	s = str;
 	while (*s && ft_isspace(*s))
@@ -36,5 +36,5 @@ int		ft_atoi(const char *str)
 			return (0);
 		res = tmp;
 	}
-	return (res);
+	return ((int)res);
 }
