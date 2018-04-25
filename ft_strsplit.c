@@ -6,24 +6,11 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 19:36:29 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/25 11:14:44 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/25 15:38:11 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	int	ft_wcount(char *s, char c)
-{
-	int		count;
-
-	count = 0;
-	if (*s && *s != c)
-		count++;
-	while (*++s)
-		if (*s != c && *(s - 1) == c)
-			count++;
-	return (count);
-}
 
 static	int	ft_ccount(char *s, char c)
 {
@@ -32,11 +19,8 @@ static	int	ft_ccount(char *s, char c)
 	count = 0;
 	while (*s == c)
 		s++;
-	while (*s && *s != c)
-	{
+	while (*s != c && *s++)
 		count++;
-		s++;
-	}
 	return (count);
 }
 
