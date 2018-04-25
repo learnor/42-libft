@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 19:36:29 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/23 17:15:09 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/25 11:14:44 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,6 @@ static	int	ft_ccount(char *s, char c)
 	return (count);
 }
 
-//	static int ft_makeword(char *dst, char *s, int len)
-//	{
-//		dst = (char *)malloc(sizeof(*dst) * (len + 1));
-//		if (!dst)
-//			return (0);
-//		dst[len] = '\0';
-//		dst = ft_strncpy(dst, s, len);
-//		return (1);
-//	}
-
 char		**ft_strsplit(char const *s, char c)
 {
 	register char	*p;
@@ -72,13 +62,7 @@ char		**ft_strsplit(char const *s, char c)
 		wsize = ft_ccount(p, c);
 		while (*p == c)
 			p++;
-//		if (!ft_makeword(&(ret[i]), p, wsize))
-//			return (NULL);
-		ret[i] = (char *)malloc(sizeof(*ret[i]) * (wsize + 1));
-		if (!ret[i])
-			return (NULL);
-		ret[i][wsize] = '\0';
-		ret[i] = ft_strncpy(ret[i], p, wsize);
+		ret[i] = ft_strsub(p, 0, wsize);
 		while (*p && *p != c)
 			p++;
 	}

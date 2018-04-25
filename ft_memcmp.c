@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 02:09:37 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/20 14:43:32 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/24 21:21:39 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	ps1 = (unsigned char *)s1;
 	ps2 = (unsigned char *)s2;
 	i = n;
-	while (i-- && *ps1++ == *ps2++)
-		;
-	if (i)
-	{
-		ps1--;
-		ps2--;
-	}
-	if (*ps1 > *ps2)
-		return (1);
-	if (*ps1 < *ps2)
-		return (-1);
+	while (i--)
+		if (*ps1++ != *ps2++)
+			return (*--ps1 - *--ps2);
 	return (0);
 }
