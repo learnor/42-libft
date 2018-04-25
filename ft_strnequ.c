@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 03:28:44 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/22 03:48:39 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/25 13:44:10 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		return (0);
 	ps1 = (char *)s1;
 	ps2 = (char *)s2;
-	i = n + 1;
-	while (*++ps1 == *++ps2 && --i)
-		if (!*ps1)
-			return (1);
+	i = n;
 	if (i)
-		return (0);
+		return (ft_strncmp(s1, s2, i) ? 0 : 1);
 	return (1);
 }
