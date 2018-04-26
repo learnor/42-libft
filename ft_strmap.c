@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 01:26:00 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/25 22:03:07 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/26 01:04:41 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	register int	i;
 
 	ret = (s && f) ? (char *)malloc(sizeof(*ret) * (ft_strlen(s) + 1)) : NULL;
-	if(!ret)
+	if (!ret)
 		return (NULL);
 	ptr = (char *)s;
 	i = -1;
