@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 23:54:32 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/23 18:51:25 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/26 00:57:26 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 void	ft_putstr(char const *s)
 {
-	register size_t	len;
-
 	if (s)
-	{
-		len = ft_strlen(s);
-		write(1, s, len);
-	}
+		write(1, s, ft_strlen(s));
 }

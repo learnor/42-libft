@@ -6,7 +6,7 @@
 /*   By: zwen <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 18:59:19 by zwen              #+#    #+#             */
-/*   Updated: 2018/04/22 19:34:58 by zwen             ###   ########.fr       */
+/*   Updated: 2018/04/25 23:44:03 by zwen             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,6 @@ char	*ft_strtrim(char const *s)
 		len--;
 	ret = (char *)malloc(sizeof(*ret) * (len + 1));
 	if (ret)
-	{
 		ret[len] = '\0';
-		while (len--)
-			ret[len] = ptr[len];
-		return (ret);
-	}
-	return (NULL);
+	return (ret ? ft_strncpy(ret, ptr, len) : NULL);
 }
